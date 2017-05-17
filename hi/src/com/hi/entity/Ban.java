@@ -18,14 +18,8 @@ public class Ban implements java.io.Serializable {
 	public Ban() {
 	}
 
-	/** minimal constructor */
-	public Ban(Integer id) {
-		this.id = id;
-	}
-
 	/** full constructor */
-	public Ban(Integer id, String ban, String tech) {
-		this.id = id;
+	public Ban(String ban, String tech) {
 		this.ban = ban;
 		this.tech = tech;
 	}

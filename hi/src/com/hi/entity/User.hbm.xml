@@ -7,8 +7,8 @@
 <hibernate-mapping>
     <class name="com.hi.entity.User" table="user" catalog="hi">
         <id name="id" type="java.lang.Integer">
-            <column name="id" />
-            <generator class="native" />
+            <column name="Id" />
+            <generator class="identity" />
         </id>
         <property name="name" type="java.lang.String">
             <column name="name" />

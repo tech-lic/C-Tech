@@ -18,14 +18,8 @@ public class User implements java.io.Serializable {
 	public User() {
 	}
 
-	/** minimal constructor */
-	public User(Integer id) {
-		this.id = id;
-	}
-
 	/** full constructor */
-	public User(Integer id, String name, String age) {
-		this.id = id;
+	public User(String name, String age) {
 		this.name = name;
 		this.age = age;
 	}
