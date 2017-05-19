@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>May</name>
-	<description />
+	<description></description>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -296,12 +296,16 @@
 		</dependency>
 		<!-- <dependency> <groupId>javassist</groupId> <artifactId>javassist</artifactId> 
 			<version>3.9.0</version> </dependency> -->
-		<!-- https://mvnrepository.com/artifact/org.javassist/javassist -->
+		<!-- https://mvnrepository.com/artifact/javassist/javassist -->
 		<dependency>
-			<groupId>org.javassist</groupId>
+			<groupId>javassist</groupId>
 			<artifactId>javassist</artifactId>
-			<version>3.21.0-GA</version>
+			<version>3.12.1.GA</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.javassist/javassist -->
+		<!-- <dependency> <groupId>org.javassist</groupId> <artifactId>javassist</artifactId> 
+			<version>3.21.0-GA</version> </dependency> -->
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -358,8 +362,22 @@
 			<artifactId>persistence-api</artifactId>
 			<version>1.0</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
 	</dependencies>
+
+
 	<build>
+
+		<!-- <resources> <resource> <directory>src/main/java/com/hi/entity/user</directory> 
+			<includes> <include>User.hbm.xml</include> </includes> <targetPath>com/hi/entity/user</targetPath> 
+			</resource> <resource> <directory>src/main/java/</directory> <includes> <include>*.xml</include> 
+			</includes> <targetPath></targetPath> </resource> </resources> -->
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
