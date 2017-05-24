@@ -15,4 +15,5 @@
 	<bean id="userAction" class="com.hi.action.UserAction">
 		<property name="userDao" ref="userDao"></property>
 	</bean>
+	
 </beans>

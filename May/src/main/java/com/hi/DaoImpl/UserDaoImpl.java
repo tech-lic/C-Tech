@@ -2,6 +2,7 @@ package com.hi.DaoImpl;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
@@ -24,6 +25,16 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
 		Session session=this.getSessionFactory().openSession();
 		session.save(user);
 	    return 1;
+	}
+
+	@Override
+	public List<String> findname() {
+		// TODO Auto-generated method stub
+		Session session=this.getSessionFactory().openSession();
+		String sql="select name from User";
+		Query query=session.createQuery(sql);
+		
+		return query.list();
 	}
 
 }

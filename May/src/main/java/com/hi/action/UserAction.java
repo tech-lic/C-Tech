@@ -9,11 +9,20 @@ import com.hi.entity.User;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class UserAction extends ActionSupport {
-    @Autowired
+    
 
 	private UserDao userDao;
 	private List<User> list;
 	private User user;
+	List<String> names;
+
+	public List<String> getNames() {
+		return names;
+	}
+
+	public void setNames(List<String> names) {
+		this.names = names;
+	}
 
 	public User getUser() {
 		return user;
@@ -22,6 +31,8 @@ public class UserAction extends ActionSupport {
 	public void setUser(User user) {
 		this.user = user;
 	}
+
+
 
 	public UserDao getUserDao() {
 		return userDao;
@@ -51,5 +62,11 @@ public class UserAction extends ActionSupport {
 		int a = userDao.save(user);
 		System.out.println(a);
 		return "save";
+	}
+	public String findnames(){
+		
+		names=userDao.findname();
+		System.out.println(names.size());
+		return "name";
 	}
 }

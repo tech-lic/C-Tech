@@ -7,4 +7,5 @@ import com.hi.entity.User;
 public interface UserDao {
 public List<User> findUser();
 public Integer save(User user);
+public List<String> findname();
 }

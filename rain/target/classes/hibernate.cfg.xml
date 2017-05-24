@@ -18,10 +18,8 @@
 			com.mysql.jdbc.Driver
 		</property>
 		<property name="myeclipse.connection.profile">hi</property>
-		<mapping resource="com/hi/entity/User.hbm.xml" />
-		<mapping resource="com/hi/entity/Ban.hbm.xml" />
-		
-		
+		<mapping resource="com/rain/entity/User.hbm.xml" />
+		<mapping resource="com/rain/entity/Ban.hbm.xml" />
 
 	</session-factory>
 
