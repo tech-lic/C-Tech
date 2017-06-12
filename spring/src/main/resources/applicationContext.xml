@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+
+
+
+	<bean id="suan" class="com.dao.impl.SuanImpl"></bean>
+	<bean id="zhu" class="com.zhu.Zhu"></bean>
+	<aop:config>
+		<aop:pointcut id="pointcut" expression="execution(*com.dao.*.*(int,int)" />
+		<aop:aspect ref="zhu">
+			<aop:before pointcut-ref="pointcut"/>
+		</aop:aspect>
+
+	</aop:config>
+
+
+	<bean id="hello" class="com.spring.Hello" scope="singleton">
+		<property name="name" value="ha"></property>
+	</bean>
+	<bean id="hello1" parent="hello" scope="prototype"></bean>
+
+</beans>
